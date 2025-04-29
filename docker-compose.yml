@@ -1,12 +1,15 @@
-# docker-compose.yml
 version: "3.8"
 
 services:
   db:
-    image: mariadb:10.11
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: librarydb
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_USER: flyway
+      MYSQL_PASSWORD: flywaypassword
+    command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306:3306"
     volumes:
@@ -17,11 +20,11 @@ services:
     depends_on:
       - db
     command: >
-      -url=jdbc:mariadb://db:3306/librarydb
+      -url=jdbc:mysql://db:3306/librarydb
       -user=root
       -password=password
       -locations=filesystem:/flyway/sql
-      info
+      migrate
     volumes:
       - ./src/main/resources/db/migration:/flyway/sql
 
@@ -30,7 +33,7 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/librarydb
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/librarydb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password
     ports:
