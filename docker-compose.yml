@@ -38,6 +38,10 @@ services:
       SPRING_DATASOURCE_PASSWORD: password
     ports:
       - "8080:8080"
+    volumes:
+      - ./src:/app/src
+      - ./target:/app/target
+      - ~/.m2:/root/.m2
 
 volumes:
   db-data:
