@@ -2,17 +2,20 @@ package com.example.librarymanagementsystem.model;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+// import javax.persistence.Column;
+// import javax.persistence.Entity;
+// import javax.persistence.EnumType;
+// import javax.persistence.Enumerated;
+// import javax.persistence.GeneratedValue;
+// import javax.persistence.GenerationType;
+// import javax.persistence.Id;
+// import javax.persistence.PreUpdate;
+// import javax.persistence.Table;
+// import javax.validation.constraints.Email;
+// import javax.validation.constraints.NotBlank;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

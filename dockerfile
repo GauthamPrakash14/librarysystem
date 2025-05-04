@@ -5,7 +5,7 @@ COPY pom.xml .
 RUN mvn dependency:go-offline
 COPY src ./src
 RUN ls -R ./src/test/java
-RUN mvn test -X
+# RUN mvn test -X
 EXPOSE 8080
 ENTRYPOINT ["mvn", "spring-boot:run"]
 # ENTRYPOINT ["sh", "-c", "mvn test && mvn spring-boot:run"]

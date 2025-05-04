@@ -41,22 +41,16 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.4.4</version>
-		</dependency> -->
-
 		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>javax.persistence-api</artifactId>
-			<version>2.2</version> <!-- Use the latest version -->
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.1.0</version> <!-- Latest version -->
 		</dependency>
 
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>2.0.1.Final</version> <!-- Use the latest version -->
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.2</version> <!-- Latest version -->
 		</dependency>
 	
 		<!-- Hibernate Core (JPA Implementation) -->
@@ -69,7 +63,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.28</version> <!-- Use the latest version -->
+			<version>1.18.30</version> <!-- Use the latest version -->
 			<scope>provided</scope>
 		</dependency>
 
@@ -80,9 +74,9 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>org.mariadb.jdbc</groupId>
-		    <artifactId>mariadb-java-client</artifactId>
-		    <version>3.1.4</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.30</version> <!-- Use the latest version -->
 		</dependency>
 	
 		<!-- Flyway Migration Tool -->
